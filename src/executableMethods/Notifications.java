@@ -30,6 +30,8 @@ public class Notifications{
 			if(driver.findElement(By.xpath("//*[@id=\"datatable\"]/form/table/tbody/tr[" + i + "]/td[1]/a")).getText().equals(s)){
 				//Unable to find corresponding textbox	
 				//driver.findElement(By.xpath("//*[@id=\"dataviews\"]/input"));
+				//@browser.div(:id=>'shipping-method-buttons-container').when_present.button(:value=>'Continue').click
+				//??????
 			}
 		}	
 	}

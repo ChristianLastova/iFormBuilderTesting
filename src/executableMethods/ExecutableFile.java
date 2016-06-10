@@ -17,6 +17,11 @@ public class ExecutableFile extends TestCases {
 	public static void main(String[] args) throws FileNotFoundException, UnhandledAlertException, InterruptedException {
 		
 		WebDriver driver = new FirefoxDriver();
+		
+		
+		
+		
+		
 //		File configFile = new File("config.txt");
 //		Scanner scanner = new Scanner(configFile);
 //		String [] userInfo = new String[15];
@@ -25,11 +30,14 @@ public class ExecutableFile extends TestCases {
 //			userInfo[i] = configValues[1];
 //			System.out.println(userInfo[i]);
 //		}
+		
+		
+		
 		navigateTo("home", driver);
 		//ALTER LOGIN CLASS DUE TO FEATURE FRENZY IMPORTANT!!!
 		login("clastova@zerionsoftware.com","1formPassword!",driver);
 		driver.navigate().refresh();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		if(driver.switchTo().alert() != null){
 		    Alert alert = driver.switchTo().alert();
 		    String alertText = alert.getText();
@@ -37,12 +45,7 @@ public class ExecutableFile extends TestCases {
 		}
 		navigateTo("notifications", driver);
 		fillNotificationBox("hello there my name is christian", driver);
-		String user = "cnl4fh@virginia.edu";
-		String [] users = new String[5];
-		selectUser(user, driver);
 		logout(driver);
-		driver.quit();
-		
+		driver.quit();	
 	}
-
 }
